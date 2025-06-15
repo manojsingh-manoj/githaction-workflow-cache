@@ -31,7 +31,9 @@ jobs:
 
       # Install production dependencies
       - name: Install Dependencies
-        run: npm ci --production
+        run: |
+           npm install
+           npm ci --production
 
       # Set up Docker Buildx
       - name: Set up Docker Buildx
